@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    background: #0d0d0d;
+    color: white;
+    font-family: Poppins, sans-serif;
+}
+
+header {
+    padding: 25px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 8%;
+    align-items: center;
+}
+
+.text h1 {
+    font-size: 40px;
+}
+
+.text button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #a67c00;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.hero img {
+    width: 380px;
+    border-radius: 8px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background: #1a1a1a;
+}
