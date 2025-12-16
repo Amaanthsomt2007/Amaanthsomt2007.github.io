@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+body.page-loaded {
+    opacity: 1;
+}
+.demo-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* centers the title */
+    position: relative;        /* allows absolute positioning of the back button */
+    height: 50px;
+    width: 100%;
+}
+
+/* back arrow section */
+.demo-head nav {
+    position: absolute;
+    left: 10px;                 /* anchors it to the left */
+    display: flex;
+    align-items: center;
+}
+
+.demo-head nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.demo-head nav li {
+    display: flex;
+    align-items: center;
+    gap: 4px;                   /* space between arrow and text */
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* the centered title */
+#demo-head h1 {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+}
+span {
+    color: blue;
+}
+header {
+    background: #0c0c0c;
+    border-bottom: 3px solid #00f;
+}
+#row {
+    background: #333;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* each column */
+#row .row {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#row .row:first-child {
+    border-right: 2px solid #555;
+}
+.slider {
+    width: 100%;
+    height: 220px;              /* adjust height here */
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* hide all images */
+.slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+/* show active image */
+.slider img.active {
+    opacity: 1;
+}
+.slider {
+    cursor: grab;
+}
+
+.slider:active {
+    cursor: grabbing;
+}
+.crop-top {
+    object-position: top center;
+}
+
+.crop-center {
+    object-position: center center;
+}
+
+.crop-bottom {
+    object-position: bottom center;
+}
+
+.crop-left {
+    object-position: center left;
+}
+
+.crop-right {
+    object-position: center right;
+}
+/* container */
+.button {
+    margin-top: 20px;
+}
+
+/* full-width anchor button */
+.cta-link {
+    display: block;              /* key: makes <a> behave like a block */
+    width: 100%;                 /* fills the second column */
+    padding: 14px 0;
+
+    text-align: center;
+    background: #00f;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+/* hover / tap feedback */
+.cta-link:hover {
+    background: #0055ff;
+}
+
+.cta-link:active {
+    transform: scale(0.98);
+}
+.row h2,
+.row p {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.row h2 {
+    animation-delay: 0.1s;
+}
+
+.row p {
+    animation-delay: 0.2s;
+}
+
+.slider {
+    opacity: 0;
+    transform: scale(0.98);
+    animation: fadeInScale 0.7s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.button {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.45s;
+}
+
+/* animations */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.slider img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.cta-link {
+    position: relative;
+    overflow: hidden;
+}
+
+/* glow pulse */
+.cta-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.15);
+    opacity: 0;
+    animation: pulse 2.5s infinite;
+}
+
+.cta-link:hover::after,
+.cta-link:active::after {
+    animation: none;
+}
+
+@keyframes pulse {
+    0% { opacity: 0; }
+    50% { opacity: 0.25; }
+    100% { opacity: 0; }
+}
+.cta-link {
+    -webkit-tap-highlight-color: transparent;
+}
+footer {
+    text-align: center;
+    padding: 16px 10px;
+
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+
+    background: #0011ff;
+    box-shadow:
+        0 0 10px rgba(0, 0, 255, 0.6),
+        0 0 25px rgba(0, 0, 255, 0.4),
+        0 0 45px rgba(0, 0, 255, 0.2);
+
+    margin-top: 40px;
+}
+footer {
+    animation: neonPulse 3.5s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+    0%, 100% {
+        box-shadow:
+            0 0 10px rgba(0, 0, 255, 0.6),
+            0 0 25px rgba(0, 0, 255, 0.4),
+            0 0 45px rgba(0, 0, 255, 0.2);
+    }
+    50% {
+        box-shadow:
+            0 0 14px rgba(0, 0, 255, 0.9),
+            0 0 35px rgba(0, 0, 255, 0.6),
+            0 0 60px rgba(0, 0, 255, 0.35);
+    }
+}
+@media (max-width: 768px) {
+    #row {
+        flex-direction: column;
+    }
+
+    #row .row {
+        width: 100%;
+        border-right: none;
+    }
+
+    .slider {
+        height: 200px;
+    }
+
+    .cta-link {
+        font-size: 15px;
+        padding: 14px;
+    }
+}
