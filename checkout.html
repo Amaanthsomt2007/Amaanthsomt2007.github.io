@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="amazon.css">
+</head>
+<body>
+
+<header>
+  <h2 style="padding:16px;">Checkout</h2>
+</header>
+
+<main class="checkout-container">
+
+  <section class="checkout-form">
+    <h3>Shipping Information</h3>
+
+    <input type="text" placeholder="Full Name" required>
+    <input type="text" placeholder="Address" required>
+    <input type="text" placeholder="City" required>
+    <input type="text" placeholder="Country" required>
+
+    <button id="placeOrderBtn">Place Order</button>
+  </section>
+
+  <section class="checkout-summary">
+    <h3>Order Summary</h3>
+    <div id="summaryItems"></div>
+    <p><strong>Total:</strong> <span id="summaryTotal">$0</span></p>
+  </section>
+
+</main>
+
+<script src="checkout.js"></script>
+</body>
+</html>
