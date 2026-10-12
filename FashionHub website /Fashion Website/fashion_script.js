@@ -268,7 +268,7 @@ if(Buy) {
     "Price: ₦" + price.toLocaleString() + "\n\n" +
     "Please let me know how I can proceed with my order.";
     
-    const whatsappURL = `https://wa.me/2348136503700?text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://wa.me/2349066674073?text=${encodeURIComponent(message)}`;
 
 window.open(whatsappURL, "_blank");
     });
