@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionHub   |  Home</title>
+    <script src="fashion_script.js" defer></script>
+    <link rel="stylesheet" href="fashion_style.css">
+    <script src="https://kit.fontawesome.com/cb08ec855e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+                <div class="contain">
+                    <h1>FashionHub</h1>
+                
+                <div class="search">
+                    <input type="search" placeholder="Search Products" id="search_products" autocomplete="off" required>
+                    <button type="button" id="search_button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    
+                    <ul id="search_suggestions"></ul>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="current"><a href="index.html"><i class="fa-solid fa-house"></i></a></div>
+                <div><i id="open_modal" class="fa-solid fa-circle-user"></i></div>
+                
+                <div><a href="fashion_cart.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
+            </nav>
+    </header>
+    
+    <!-- Modal Box For Login Form -->
+    <div class="modal_background">
+        <div class="modal_box">
+            <button id="close_modal">&times</button>
+            
+            <h3 class="closehead">Welcome Back</h3>
+            
+            <form id="form1" class="form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter Username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <button type="submit" id="submit">Log In</button>
+            </form>
+            
+            <p class="p_form">Don't have an account? <a href="signup.html" class="sss">Sign Up</a></p>
+        </div>
+    </div>
+    
+    
+    <!-- Hero Slideshow -->
+    <div class="img">
+        <div class="slide">
+            <img src="images/hero_1.jpg" alt="Image" loading="lazy">
+            
+            <div class="hero_text">
+                <h3>New Accessory Collection</h3>
+                <p>Premium Trousers and Belts</p>
+                <button id="shop_now" onclick="alert('This is just a demo for my portfolio, and for customer outreach purposes only')">Shop Now</button>
+            </div>
+        </div>
+        
+         <div class="slide">
+             <img src="images/hero_2.jpg" alt="Image" loading="lazy">
+             
+             <div class="hero_text">
+                <h3>Luxury Male Footwear</h3>
+                <p>Male Shoes</p>
+                <button id="shop_now" onclick="alert('This is just a demo for my portfolio, and for customer outreach purposes only')">Shop Now</button>
+            </div>
+             </div>
+             
+          <div class="slide">
+              <img src="images/hero_3.jpg" alt="Image" loading="lazy">
+              
+              <div class="hero_text">
+                <h3>New Accessory Collection</h3>
+                <p>Wrist Watch, Tie, and Perfume</p>
+                <button id="shop_now" onclick="alert('This is just a demo for my portfolio, and for customer outreach purposes only')">Shop Now</button>
+            </div>
+          </div>
+          
+           <div class="slide">
+               <img src="images/hero_4.jpg" alt="Image" loading="lazy">
+               
+               <div class="hero_text">
+                <h3>New Accessory Collection</h3>
+                <p>Female Shoes</p>
+                <button id="shop_now" onclick="alert('This is just a demo for my portfolio, and for customer outreach purposes only')">Shop Now</button>
+            </div>
+           </div>
+           
+            <div class="slide">
+                <img src="images/hero_5.jpg" alt="Image" loading="lazy">
+                
+                <div class="hero_text">
+                <h3>New Accessory Collection</h3>
+                <p>Luxury Bags</p>
+                <button id="shop_now" onclick="alert('This is just a demo for my portfolio, and for customer outreach purposes only')">Shop Now</button>
+            </div>
+            </div>
+    </div>
+    
+    <!-- Product Cards -->
+    <h2 class="head">Shop By Category</h2>
+    <div class="category" id="cat">
+        
+        <a href="male_fashion.html">
+            <div class="card">
+            <img src="images/male_cloth_1.jpg" alt="men's fashion" loading="lazy">
+            <h3 class="cat_text">Men's<br>Fashion</h3>
+        </div>
+        </a>
+        
+        <a href="female_fashion.html">
+            <div class="card">
+            <img src="images/female_cloth_1.jpg" alt="Women's fashion" loading="lazy">
+             <h3 class="cat_text">Women's<br>Fashion</h3>
+        </div>
+        </a>
+        
+        <a href="shoes.html">
+            <div class="card">
+            <img src="images/male_shoe_1.jpg" alt="men's fashion" loading="lazy">
+            <h3 class="cat_text">Men's<br>Shoes</h3>
+         </div>
+         </a>
+        
+        <a href="female_shoes.html">
+            <div class="card">
+            <img src="images/female_shoe_1.jpg" alt="women's fashion" loading="lazy">
+            <h3 class="cat_text">Women's<br>Shoes</h3>
+         </div>
+         </a>
+         
+         <a href="bag.html">
+             <div class="card">
+            <img src="images/bag_1.jpg" alt="Hand bag" loading="lazy">
+             <h3 class="cat_text">Luxury<br>Bags and Backpacks</h3>
+         </div>
+         </a>
+         
+         <a href="accessories.html">
+             <div class="card">
+            <img src="images/accessory_1.jpg" alt="Luxury Accessories" loading="lazy">
+            <h3 class="cat_text">Luxury<br>Accessories</h3>
+         </div>
+         </a>
+         
+    </div>
+    
+    <div class="category" id="feat">
+        <div>
+            <h2 class="head">Featured Products</h2>
+         </div>
+         
+         <a href="#" class="featured_products" onclick="alert('This is a demo website for client outreach purposes')">
+             <div class="card">
+             <img src="images/featured_1.jpg" alt="Full Pack" loading="lazy">
+             <h3 class="cat_text">Full<br>Male Pack</h3>
+         </div>
+         </a>
+         
+         <a href="#" class="featured_products" onclick="alert('This is a demo website for client outreach purposes')">
+             <div class="card">
+             <img src="images/featured_2.jpg" alt="Full Jewelry Pack Image" loading="lazy">
+             <h3 class="cat_text">Full<br>Jewelry Pack</h3>
+         </div>
+         </a>
+         
+         <a href="#" class="featured_products" onclick="alert('This is a demo website for client outreach purposes')">
+             <div class="card">
+             <img src="images/featured_3.jpg" alt="Bag And Hat" loading="lazy">
+             <h3 class="cat_text">Bag<br>And Hat</h3>
+         </div>
+    </div>
+    </a>
+   
+   <div>
+       <h3 class="foot">Subscribe To Our Newsletter</h3>
+       
+       <form id="newsletter">
+           <input type="email" placeholder="Enter Email" id="mail" required>
+           <input type="submit" id="mail_btn" placeholder="Subscribe">
+       </form>
+   </div>
+   
+    <footer>
 
+    <div class="footer">
+        <div>
+        <h3 class="foot">FashionHub</h3>
+        <p>Quality fashion for every style.</p>
+    </div>
+
+    <div>
+        <h3 class="foot">Quick Links</h3>
+        <a href="#" class="links">Home</a><br>
+        <a href="#cat" class="links">Categories</a><br>
+        <a href="#feat" class="links">Featured Products</a><br>
+        <a href="#" class="links">About Us</a>
+    </div>
+
+    <div>
+        <h3 class="foot">Contact</h3>
+        <p>Email: info@fashionhub.com</p>
+        <p>Phone: +234 800 000 0000</p>
+    </div>
+
+    <div>
+        <h3 class="foot">Follow Us</h3>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-tiktok"></i>
+    </div>
+    
+    </div>
+
+ 
+ <p>&copy; 2026 FashionHub. All Rights Reserved.</p>
+
+</footer>
+
+
+</body>
+</html>

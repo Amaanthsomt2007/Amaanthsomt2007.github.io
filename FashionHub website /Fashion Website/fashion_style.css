@@ -1,0 +1,593 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+}
+
+/* For The Heading */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+    background-color: #333;
+    border-bottom: 2px solid #00f;
+    margin-bottom: 20px;
+    padding: 10px;
+    
+    transition: none;
+}
+
+.contain {
+    text-align: center;
+}
+
+.contain h1 {
+    font-weight: bold;
+    font-size: 50px;
+    margin: 30px 0 15px;
+    transition: none;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.search {
+    position: relative;
+    margin-top: 20px;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Search Suggestions List */
+#search_suggestions {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    width: 70%;
+    box-sizing: border-box;
+
+    margin: 5px 0 0;
+    padding: 0;
+    list-style: none;
+
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #00f;
+    border-radius: 12px;
+
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1001;
+
+    display: none;
+}
+
+/* Individual Suggestions */
+#search_suggestions li {
+    padding: 12px 15px;
+    text-align: left;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Remove the border from the last suggestion */
+#search_suggestions li:last-child {
+    border-bottom: none;
+}
+
+/* Hover Effect */
+#search_suggestions li:hover {
+    background-color: #eee;
+    color: #00f;
+}
+
+/* Header of Signup Page */
+.back {
+    text-decoration: none;
+    color: #00f;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.signup h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 30px 0 15px;
+}
+
+/* Header when I scroll up. JS will handle this */
+header.compact {
+    padding: 3px 10px;
+}
+
+header.compact .contain h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+header.compact .search {
+    opacity: 0;
+    pointer-events: none;
+}
+
+header.compact .signup h1 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+/* Search Bar of Header */
+#search_products {
+    width: 70%;
+    height: 50px;
+    border: 2px solid #00f;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#search_products::placeholder {
+    text-align: center;
+}
+
+#search_products:hover {
+    color: #00f;
+}
+
+#search_button {
+    background: #f1f1f1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* For the Two Forms (Sign Up and Log In) */
+
+/* the Modal/log in */
+.modal_background {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    
+    display: none;
+    
+    justify-content: center;
+    align-items: center;
+    
+    z-index: 9999;
+}
+
+/* To Display the Modal*/
+.modal_background.show {
+    display: flex;
+}
+
+.modal_box {
+    position: relative;
+    background: #00f;
+    padding: 10px;
+    border-radius: 20px;
+    width: 80%;
+    height: 600px;
+    box-sizing: border-box;
+}
+
+#close_modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;  
+}
+
+.closehead {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.form {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form input {
+    width: 80%;
+    height: 35px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.form input::placeholder {
+    text-align: center;
+    color: #888;
+}
+
+.p_form {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.sss {
+    color: green;
+    text-decoration: none;
+}
+
+#submit {
+    background: #f00;
+    color: #00f;
+    width: 20%;
+    height: 40px;
+}
+
+/* Hero Slideshow */
+.slide {
+    position: relative;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.hero_text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Slideshow Text Button */
+#shop_now {
+    background: #f1f1f1;
+    border-radius: 20px;
+    color: #000;
+    height: 25px;
+}
+
+#shop_now:hover {
+    background: #00f;
+    color: #f00;
+}
+
+/* Product Cards/Category Section */
+.category {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.head {
+    text-align: center;
+    margin: 30px 0 20px;
+}
+
+.cat_text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    
+    text-decoration: none;
+}
+
+#newsletter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#mail {
+    width: 70%;
+    height: 50px;
+    border: 2px solid #00f;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#mail::placeholder {
+    text-align: center;
+}
+
+#mail:hover {
+    color: #00f;
+}
+
+#mail_btn {
+    background: #f1f1f1;
+    width: 70px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+/* Footer Section */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #f00;
+    margin-top: 20px;
+}
+
+.foot {
+    text-align: center;
+    margin: 30px 0 20px;
+}
+
+.links {
+    text-decoration: none;
+}
+
+/* For the Signup Page */
+.form1 {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.credentials {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.credentials input {
+    width: 80%;
+    height: 50px;
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #00f;
+    text-align: center;
+    color: #888;
+}
+
+#submit_1 {
+    background: #f00;
+    color: #00f;
+    width: 20%;
+    height: 40px;
+}
+
+.credentials input::placeholder {
+    text-align: center;
+    color: #888;
+}
+
+/* Product Lists Page */
+.product_list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.product_list a {
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #000;
+    background: #f1f1f1;
+    border: 2px solid #00f;
+    border-radius: 20px;
+    
+}
+
+.product_list a img {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.product_name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+
+/* For Cart Page */
+#product_list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#product_list a {
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #000;
+    background: #f1f1f1;
+    border: 2px solid #00f;
+    border-radius: 20px;
+    
+}
+
+#product_list a img {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+}
+
+/* Product Description Pages */
+.description_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.Actions {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.action_button {
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    border: 2px solid #f1f1f1;
+    background: #ff0;
+}
+
+/* Profile Page */
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.profile_info div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.profile_icon  {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_icon i {
+    color: #000;
+    font-size: 400px;
+}
+
+/* RESPONSIVE WEB DESIGN */
+@media(min-width: 600px){
+    /* Footer Section */
+    footer {
+        display: flex; 
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    footer p {
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Product Description Pages */
+    .description_container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+    }
+     
+    .description_container img {
+        width: 50%;
+    }
+    
+    .description_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .Actions {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Product List Pages */
+    .product_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    }
+    
+    /* Cart Page */
+    .product_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    }
+    
+    /* Profile Page */
+    .profile {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .profile_icon  {
+    width: 50%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .profile_icon i {
+    color: #000;
+    font-size: 300px;
+    }
+}
