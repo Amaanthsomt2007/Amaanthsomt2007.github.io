@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionHub Website Project Description</title>
+      <script src="https://kit.fontawesome.com/cb08ec855e.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="project_description.css">
+</head>
+<body>
+   <header>
+        <div class="demo-head">
+           <nav>
+               <ul>
+                   <li><a href="project.html"><i class="fa-solid fa-chevron-left"></i><span>Back</span></a></li>
+               </ul>
+           </nav>
+           <div id="demo-head">
+            <h1>Project Description</h1>
+            </div>
+    </div>
+   </header>
+    
+    
+    <section id="row">
+        <div class="row" id="line">
+        <h2>Overview</h2>
+        <p>FashionHub is a functional, interactive, and mobile-responsive fashion e-commerce website built entirely with frontend technologies. It demonstrates how businesses can showcase their products, display prices, and make ordering easier without overwhelming customers with endless WhatsApp Status updates or overcrowded Instagram and TikTok posts. Instead of posting every item individually, a seller can direct customers to one website where they can browse different product categories, search for specific items, view product details, and see prices before making an order. By bringing products and prices together in one accessible place, FashionHub helps answer common customer questions, reduces repetitive enquiries, and provides a more organized shopping experience. The website combines a clean interface with interactive features and a WhatsApp-based ordering process, demonstrating how a simple frontend website can help a small business present its products professionally and connect with potential customers.</p>
+
+        <h2>Features</h2>
+        <p>Responsive, mobile-first layout designed to work across different screen sizes<br><br>
+
+Interactive homepage with an automatically changing image slideshow and touch-based slide navigation<br><br>
+
+Functional search bar that searches for products across multiple category pages and displays matching suggestions as the user types<br><br>
+
+Multiple product categories that organize fashion items for easier browsing<br><br>
+
+Product description pages that provide a dedicated page for individual items<br><br>
+
+Signup and login forms presented through an interactive modal interface<br><br>
+
+Frontend account handling using localStorage to retain registered account information between visits<br><br>
+
+Session-based login state management using sessionStorage<br><br>
+
+Dynamic profile page that displays information entered during signup<br><br>
+
+Shopping cart functionality that allows logged-in users to add products and remove individual items<br><br>
+
+Buy Now functionality that prepares an order message containing the user's account and delivery information and redirects the user to the seller's WhatsApp<br><br>
+
+CSS animations, transitions, and interactive visual effects that make the interface more engaging<br><br>
+
+JavaScript-powered interactions, form validation, DOM manipulation, and dynamic content rendering<br><br>
+
+Responsive CSS styling that adapts page layouts and interface elements to different screen sizes</p>
+
+        <h2>Technologies Used</h2>
+        <p>HTML5 for structuring the homepage, product categories, product description pages, signup and login forms, profile, and shopping cart<br><br>
+
+CSS3 for responsive layouts, mobile-first styling, animations, transitions, and the overall visual design<br><br>
+
+Vanilla JavaScript for search functionality, product discovery across pages, slideshow controls, form validation, modal interactions, account handling, session state management, shopping cart operations, and WhatsApp order preparation<br><br>
+
+Browser localStorage and sessionStorage for demonstrating client-side account persistence, cart storage, and temporary login state management</p>
+    </div>
+    <div class="row" id="line">
+        <h2>How it Works</h2>
+        <p>When visitors open FashionHub, they are welcomed by a homepage hero section featuring promotional visuals and navigation that introduces the website and guides them toward the available product categories. The homepage slideshow automatically changes images, while users can also interact with it through touch gestures on supported mobile devices. Visitors can browse categories or use the search bar to find products across multiple category pages. JavaScript fetches the category-page HTML, extracts product names, prices, and links, and uses that information to display matching suggestions as the user types. Selecting a suggestion takes the visitor directly to the corresponding product description page.
+
+Users can create an account through the signup form and subsequently log in through the modal login interface. The demo stores account information in the browser's localStorage and uses sessionStorage to track the current login state. The profile page displays the information saved during signup. When a logged-in user adds a product to the cart, JavaScript saves the product's details in localStorage so that the cart can display the selected items and allow individual products to be removed.
+
+When a user chooses to purchase a product, the Buy Now functionality checks the login state and prepares a WhatsApp message containing the user's saved details, including their name and delivery address. The website then redirects the user to the seller's WhatsApp, where the order can be discussed, confirmed, and completed directly between the customer and seller. This approach demonstrates how a frontend website can organize product discovery and prepare customer order information without requiring a dedicated backend server. The account storage, cart, and ordering features are demonstrations of frontend functionality rather than a production payment or account-management system.</p>
+
+        <h2>Challenges Overcome</h2>
+        <p>One of the biggest challenges in building FashionHub was understanding and implementing the JavaScript logic behind a search bar that could find products across multiple HTML pages. Because the project was built entirely on the frontend without a backend database or search API, I had to work out how JavaScript could fetch the HTML content of different category pages, extract product names, prices, and links, combine the results, and use them to produce relevant search suggestions. This required me to think carefully about asynchronous operations, promises, DOMParser, DOM traversal, event listeners, and how information could be collected from separate pages.
+
+I also developed my understanding of how JavaScript can add and remove CSS classes to control interface states, such as opening and closing modals and changing the appearance of the header while scrolling. Another major area of growth was learning to coordinate CSS and JavaScript so that styling and interactive behavior work together to create a more dynamic user experience. Building the responsive layouts, adjusting elements for smaller screens, and connecting the signup, login, profile, cart, and WhatsApp ordering features also challenged me to think about how different parts of a website depend on one another.
+
+Overall, FashionHub pushed me beyond simply writing static HTML and CSS. It required me to apply JavaScript concepts in a frontend-only environment and improvise solutions for functionality that is often implemented with support from a backend in larger applications.</p>
+
+        <h2>What I Learned</h2>
+        <p>This project strengthened my understanding of how to build a search system using JavaScript in a multi-page website. I learned how to retrieve HTML from different category pages, parse it, extract the information needed for each product, combine the results, and use array filtering and matching logic to provide search suggestions. I also gained practical experience with asynchronous JavaScript and how to connect user input to dynamically generated results.
+
+I learned how to use localStorage to retain account and cart information in the browser, and sessionStorage to manage temporary login-state information. This helped me understand how a website can check whether a user is logged in and use information supplied during signup, such as their name, username, and address, when preparing an order message for the seller. I also improved my knowledge of form validation, event handling, DOM manipulation, and the use of CSS classes to control interactive interface elements.
+
+Most importantly, FashionHub taught me how to bring HTML, CSS, and JavaScript together to build a functional, responsive, and interactive website without relying on a backend. It also helped me understand the limitations of a frontend-only approach, particularly around secure account management, persistent authentication, and processing real transactions.</p>
+  
+    <div class="slider">
+        <img src="FashionHub_1.jpg" class="active crop-top">
+<img src="FashionHub_2.jpg" class="crop-center">
+<img src="FashionHub_3.jpg" class="crop-bottom">
+<img src="FashionHub_4.jpg" class="crop-left">
+<img src="FashionHub_5.jpg" class="crop-right">
+<img src="FashionHub_6.jpg" class="crop-bottom">
+    </div>
+    <div class="button">
+        <a href="FashionHub%20website/Fashion%20Website/index.html" class="cta-link">Click here to view</a>
+    </div>
+    </div>
+    
+  </section>
+  
+  <footer>Amaanthsomt portfolio Copyright &copy; 2025</footer>
+  <script src="project_description.js"></script>
+</body>
+</html>
