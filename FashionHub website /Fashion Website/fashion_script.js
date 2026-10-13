@@ -291,6 +291,8 @@ function addToCart(name, price, image, link) {
         cart.push(product);
         
         localStorage.setItem("cart", JSON.stringify(cart));
+
+        alert("Item successfully added");
         
     }else {
         alert("Please log in or sign up to add products to your cart");
@@ -326,6 +328,8 @@ function removeCart(index) {
     localStorage.setItem("cart", JSON.stringify(cart));
     
     location.reload();
+
+    alert("Item removed");
 }
 
 /* Profile Page Logic/DOM */
